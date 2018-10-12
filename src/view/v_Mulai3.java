@@ -9,12 +9,12 @@ package view;
  *
  * @author Habibullah
  */
-public class Loading extends javax.swing.JFrame {
+public class v_Mulai3 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Loading
+     * Creates new form v_Mulai3
      */
-    public Loading() {
+    public v_Mulai3() {
         initComponents();
     }
 
@@ -27,29 +27,38 @@ public class Loading extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        L = new javax.swing.JLabel();
-        P = new javax.swing.JLabel();
-        LBar = new javax.swing.JProgressBar();
+        text = new javax.swing.JLabel();
+        lanjut = new javax.swing.JButton();
         gbr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        L.setFont(new java.awt.Font("Cooper BlkIt BT", 0, 18)); // NOI18N
-        L.setText("Loading..");
-        getContentPane().add(L, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, -1, -1));
+        text.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        text.setText("\"let's check it out\"");
+        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, -1, -1));
 
-        P.setText("100%");
-        getContentPane().add(P, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, -1, -1));
-        getContentPane().add(LBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 500, 20));
+        lanjut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.lanjut.png"))); // NOI18N
+        lanjut.setBorder(null);
+        lanjut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lanjutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(935, 560, 90, 40));
 
-        gbr.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu_img/1. loading screan.png"))); // NOI18N
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanjutActionPerformed
+        v_Stage1 s1 = new v_Stage1();
+        s1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lanjutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -68,28 +77,27 @@ public class Loading extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Loading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Mulai3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Loading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Mulai3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Loading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Mulai3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Loading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Mulai3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Loading().setVisible(true);
+                new v_Mulai3().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel L;
-    public javax.swing.JProgressBar LBar;
-    public javax.swing.JLabel P;
     private javax.swing.JLabel gbr;
+    private javax.swing.JButton lanjut;
+    private javax.swing.JLabel text;
     // End of variables declaration//GEN-END:variables
 }

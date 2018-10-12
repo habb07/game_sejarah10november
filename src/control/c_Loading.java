@@ -7,8 +7,8 @@ package control;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import view.Menu;
-import view.Loading;
+import view.v_Menu;
+import view.v_Loading;
 
 
 /**
@@ -17,8 +17,8 @@ import view.Loading;
  */
 public class c_Loading {
     public static void main(String[] args) {
-        Menu m = new Menu();
-        Loading l = new Loading();
+        v_Menu m = new v_Menu();
+        v_Loading l = new v_Loading();
         l.setVisible(true);
         
         try {

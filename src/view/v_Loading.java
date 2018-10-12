@@ -9,12 +9,12 @@ package view;
  *
  * @author Habibullah
  */
-public class Menu extends javax.swing.JFrame {
+public class v_Loading extends javax.swing.JFrame {
 
     /**
-     * Creates new form Menu
+     * Creates new form Loading
      */
-    public Menu() {
+    public v_Loading() {
         initComponents();
     }
 
@@ -27,13 +27,25 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        L = new javax.swing.JLabel();
+        P = new javax.swing.JLabel();
+        LBar = new javax.swing.JProgressBar();
         gbr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        L.setFont(new java.awt.Font("Cooper BlkIt BT", 0, 36)); // NOI18N
+        L.setText("Loading..");
+        getContentPane().add(L, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, -1, -1));
+
+        P.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        P.setText("100%");
+        getContentPane().add(P, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 460, -1, -1));
+        getContentPane().add(LBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 700, 30));
+
         gbr.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu_img/3. menu.png"))); // NOI18N
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/loading.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -57,25 +69,31 @@ public class Menu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Loading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Loading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Loading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Loading.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu().setVisible(true);
+                new v_Loading().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel L;
+    public javax.swing.JProgressBar LBar;
+    public javax.swing.JLabel P;
     private javax.swing.JLabel gbr;
     // End of variables declaration//GEN-END:variables
 }
