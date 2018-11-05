@@ -17,18 +17,14 @@ public class c_char {
     private Image gambaremak;
     private Image gambarkunci;
     private Image gambarbdboy;  //variabel tampung gambar
-    public int xbdboy = 0; //kooerdinat sumbu x gambar 
-    int ybdboy = 0; // koordinat sumbu y gambar
-    int xabdboy = 0; // penambahan sumbu x
-    int yabdboy = 0; //penambahan sumbu y
+    public int xchar = 0; //kooerdinat sumbu x gambar 
+    int ychar = 0; // koordinat sumbu y gambar
+    int xachar = 0; // penambahan sumbu x
+    int yachar = 0; //penambahan sumbu y
 
-    public int xemak = 200; //kooerdinat sumbu x gambar 
-    int yemak = 200; // koordinat sumbu y gambar
-    int xaemak = 0; // penambahan sumbu x
-    int yaemak = 0;
-
-    int xkunci = 100;
-    int ykunci = 100;//penambahan sumbu y
+    
+    int xbendera = 100;
+    int ybendera = 100;//penambahan sumbu y
     
     public RunningMakKosanYangRempongBetDah(){
         gambarbdboy = new ImageIcon(getClass().getResource("kids jaman now.png")).getImage();
@@ -44,23 +40,23 @@ public class c_char {
             @Override
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-                    xabdboy = -5;
+                    xachar = -5;
                 }
                 if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-                    xabdboy = 5;
+                    xachar = 5;
                 }
                 if (e.getKeyCode() == KeyEvent.VK_UP) {
-                    yabdboy = -5;
+                    yachar = -5;
                 }
                 if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-                    yabdboy = 5;
+                    yachar = 5;
                 }
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
-                xabdboy = 0;
-                yabdboy = 0;
+                xachar= 0;
+                yachar = 0;
             }
 
         });
@@ -89,18 +85,23 @@ public class c_char {
         super.paintComponent(g);          //anaknya paint component
         Graphics2D g2d = (Graphics2D) g.create();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.drawImage(gambarbdboy, xbdboy, ybdboy, 100, 100, null);       //gambar bdboy, 75 (ukuran)
+        g2d.drawImage(gambarbdboy, xchar, ychar, 100, 100, null);       //gambar bdboy, 75 (ukuran)
         g2d.drawImage(gambaremak, xemak, yemak, 100, 100, null);          //gambar emak, 75 (ukuran)
-        g2d.drawImage(gambarkunci, xkunci, ykunci, 100, 100, null);          //gambar kunci, 75 (ukuran)
+        g2d.drawImage(gambarkunci, xbendera, ybendera, 100, 100, null);          //gambar kunci, 75 (ukuran)
         g2d.dispose();
     }
     public void move() {
         //untuk berjalannya nanti tinggal menambahkan xa,ya
-        if (xbdboy + xabdboy > 0 && xbdboy + xabdboy < this.getWidth() - 100) {
-            xbdboy = xbdboy + xabdboy;
+        if (xchar + xachar > 0 && xchar + xachar < this.getWidth() - 100) {
+            xchar = xchar + xachar;
         }
-        if (ybdboy + yabdboy > 0 && ybdboy + yabdboy < this.getHeight() - 100) {
-            ybdboy = ybdboy + yabdboy;
+        if (ychar + yachar > 0 && ychar + yachar < this.getHeight() - 100) {
+            ychar = ychar + yachar;
+        }
+        if ((xchar > xbendera-10) && (xchar < xbendera +10) || (ychar > ybendera-10) && (ychar <ybendera +10)) {
+            System.out.println("kids dapet kunci");
+            xchar = getxrand();
+            ybendera = getyrand();
         }
        
 
@@ -119,6 +120,5 @@ public class c_char {
         }
 
     }
-    
-    
+
 }
