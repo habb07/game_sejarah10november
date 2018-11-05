@@ -33,7 +33,7 @@ public class v_Bantuan2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan2.png"))); // NOI18N
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan2.1.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         kembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.kembali.png"))); // NOI18N

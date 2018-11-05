@@ -27,14 +27,11 @@ public class v_Stage1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        gbr = new javax.swing.JLabel();
         kembali = new javax.swing.JButton();
+        gbr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/stage1.png"))); // NOI18N
-        getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         kembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.kembali.png"))); // NOI18N
         kembali.setBorder(null);
@@ -44,6 +41,9 @@ public class v_Stage1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 40));
+
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/stage1.1.png"))); // NOI18N
+        getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
