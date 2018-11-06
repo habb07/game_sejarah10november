@@ -27,33 +27,39 @@ public class v_Tentang extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        menu = new javax.swing.JButton();
         gbr = new javax.swing.JLabel();
-        kembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tentang.png"))); // NOI18N
-        getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        kembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.kembali.png"))); // NOI18N
-        kembali.setBorder(null);
-        kembali.addActionListener(new java.awt.event.ActionListener() {
+        menu.setBackground(new java.awt.Color(255, 255, 255));
+        menu.setForeground(new java.awt.Color(255, 255, 255));
+        menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.menu.png"))); // NOI18N
+        menu.setBorder(null);
+        menu.setBorderPainted(false);
+        menu.setContentAreaFilled(false);
+        menu.setFocusPainted(false);
+        menu.setVerifyInputWhenFocusTarget(false);
+        menu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kembaliActionPerformed(evt);
+                menuActionPerformed(evt);
             }
         });
-        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 40));
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 72, 50));
+
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tentang1.png"))); // NOI18N
+        getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
         v_Menu mn = new v_Menu();
         mn.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_kembaliActionPerformed
+    }//GEN-LAST:event_menuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -92,6 +98,6 @@ public class v_Tentang extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel gbr;
-    private javax.swing.JButton kembali;
+    private javax.swing.JButton menu;
     // End of variables declaration//GEN-END:variables
 }

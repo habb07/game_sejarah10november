@@ -56,7 +56,15 @@ public class v_Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        mu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.mulai.png"))); // NOI18N
+        mu.setBackground(new java.awt.Color(255, 255, 255));
+        mu.setForeground(new java.awt.Color(255, 255, 255));
+        mu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.mulai.png"))); // NOI18N
+        mu.setBorder(null);
+        mu.setBorderPainted(false);
+        mu.setContentAreaFilled(false);
+        mu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        mu.setFocusPainted(false);
+        mu.setVerifyInputWhenFocusTarget(false);
         mu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 muActionPerformed(evt);
@@ -64,37 +72,66 @@ public class v_Menu extends javax.swing.JFrame {
         });
         getContentPane().add(mu, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 195, 360, 70));
 
-        ni.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.nilai.png"))); // NOI18N
+        ni.setBackground(new java.awt.Color(255, 255, 255));
+        ni.setForeground(new java.awt.Color(255, 255, 255));
+        ni.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.nilai.png"))); // NOI18N
+        ni.setBorder(null);
+        ni.setBorderPainted(false);
+        ni.setContentAreaFilled(false);
+        ni.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ni.setFocusPainted(false);
+        ni.setVerifyInputWhenFocusTarget(false);
         ni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 niActionPerformed(evt);
             }
         });
-        getContentPane().add(ni, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 275, 360, 70));
+        getContentPane().add(ni, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 274, 360, 70));
 
-        bt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.bantuan.png"))); // NOI18N
+        bt.setBackground(new java.awt.Color(255, 255, 255));
+        bt.setForeground(new java.awt.Color(255, 255, 255));
+        bt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.bantuan.png"))); // NOI18N
+        bt.setBorder(null);
+        bt.setBorderPainted(false);
+        bt.setContentAreaFilled(false);
+        bt.setFocusPainted(false);
+        bt.setVerifyInputWhenFocusTarget(false);
         bt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btActionPerformed(evt);
             }
         });
-        getContentPane().add(bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 353, 360, 70));
+        getContentPane().add(bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 352, 360, 70));
 
-        tt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.tentang.png"))); // NOI18N
+        tt.setBackground(new java.awt.Color(255, 255, 255));
+        tt.setForeground(new java.awt.Color(255, 255, 255));
+        tt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.tentang.png"))); // NOI18N
+        tt.setBorder(null);
+        tt.setBorderPainted(false);
+        tt.setContentAreaFilled(false);
+        tt.setFocusPainted(false);
+        tt.setVerifyInputWhenFocusTarget(false);
         tt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ttActionPerformed(evt);
             }
         });
-        getContentPane().add(tt, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 433, 360, 70));
+        getContentPane().add(tt, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 431, 360, 70));
 
-        kl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.keluar.png"))); // NOI18N
+        kl.setBackground(new java.awt.Color(255, 255, 255));
+        kl.setForeground(new java.awt.Color(255, 255, 255));
+        kl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.keluar.png"))); // NOI18N
+        kl.setBorder(null);
+        kl.setBorderPainted(false);
+        kl.setContentAreaFilled(false);
+        kl.setFocusPainted(false);
+        kl.setVerifyInputWhenFocusTarget(false);
         kl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 klActionPerformed(evt);
             }
         });
-        getContentPane().add(kl, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 360, 70));
+        getContentPane().add(kl, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 509, 360, 70));
 
         gbr.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu.png"))); // NOI18N

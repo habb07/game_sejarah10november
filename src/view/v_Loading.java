@@ -42,6 +42,8 @@ public class v_Loading extends javax.swing.JFrame {
         P.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         P.setText("100%");
         getContentPane().add(P, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 460, -1, -1));
+
+        LBar.setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().add(LBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 700, 30));
 
         gbr.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

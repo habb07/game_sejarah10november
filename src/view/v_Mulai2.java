@@ -27,23 +27,29 @@ public class v_Mulai2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        gbr = new javax.swing.JLabel();
         lanjut = new javax.swing.JButton();
+        gbr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prolog1.2.png"))); // NOI18N
-        getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        lanjut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.lanjut.png"))); // NOI18N
+        lanjut.setBackground(new java.awt.Color(255, 255, 255));
+        lanjut.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        lanjut.setText("Lanjut");
         lanjut.setBorder(null);
+        lanjut.setBorderPainted(false);
+        lanjut.setContentAreaFilled(false);
+        lanjut.setFocusPainted(false);
+        lanjut.setVerifyInputWhenFocusTarget(false);
         lanjut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lanjutActionPerformed(evt);
             }
         });
-        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(935, 560, 90, 40));
+        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 540, 90, 40));
+
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prolog1.2.png"))); // NOI18N
+        getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);

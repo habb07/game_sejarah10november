@@ -38,14 +38,20 @@ public class v_Mulai3 extends javax.swing.JFrame {
         text.setText("\"let's check it out\"");
         getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, -1, -1));
 
-        lanjut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.lanjut.png"))); // NOI18N
+        lanjut.setBackground(new java.awt.Color(255, 255, 255));
+        lanjut.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
+        lanjut.setText("Lanjut");
         lanjut.setBorder(null);
+        lanjut.setBorderPainted(false);
+        lanjut.setContentAreaFilled(false);
+        lanjut.setFocusPainted(false);
+        lanjut.setVerifyInputWhenFocusTarget(false);
         lanjut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lanjutActionPerformed(evt);
             }
         });
-        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(935, 560, 90, 40));
+        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(845, 520, 180, 80));
 
         gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

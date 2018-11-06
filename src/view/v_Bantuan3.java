@@ -9,12 +9,12 @@ package view;
  *
  * @author Habibullah
  */
-public class v_Nilai extends javax.swing.JFrame {
+public class v_Bantuan3 extends javax.swing.JFrame {
 
     /**
-     * Creates new form v_Nilai
+     * Creates new form v_Bantuan2
      */
-    public v_Nilai() {
+    public v_Bantuan3() {
         initComponents();
     }
 
@@ -27,14 +27,27 @@ public class v_Nilai extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        kembali = new javax.swing.JButton();
         menu = new javax.swing.JButton();
         gbr = new javax.swing.JLabel();
 
-        jLabel1.setText("jLabel1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kembali.setBackground(new java.awt.Color(255, 255, 255));
+        kembali.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
+        kembali.setText("Kembali");
+        kembali.setBorder(null);
+        kembali.setBorderPainted(false);
+        kembali.setContentAreaFilled(false);
+        kembali.setFocusPainted(false);
+        kembali.setVerifyInputWhenFocusTarget(false);
+        kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliActionPerformed(evt);
+            }
+        });
+        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(845, 520, 180, 80));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
         menu.setForeground(new java.awt.Color(255, 255, 255));
@@ -51,12 +64,18 @@ public class v_Nilai extends javax.swing.JFrame {
         });
         getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 72, 50));
 
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nilai1.1.png"))); // NOI18N
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan3.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+        v_Bantuan2 b2 = new v_Bantuan2();
+        b2.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_kembaliActionPerformed
 
     private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
         v_Menu mn = new v_Menu();
@@ -81,27 +100,27 @@ public class v_Nilai extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(v_Nilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Bantuan2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(v_Nilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Bantuan2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(v_Nilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Bantuan2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(v_Nilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_Bantuan2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new v_Nilai().setVisible(true);
+                new v_Bantuan2().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel gbr;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton kembali;
     private javax.swing.JButton menu;
     // End of variables declaration//GEN-END:variables
 }

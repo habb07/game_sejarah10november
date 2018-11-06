@@ -27,33 +27,83 @@ public class v_Bantuan2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        gbr = new javax.swing.JLabel();
         kembali = new javax.swing.JButton();
+        lanjut = new javax.swing.JButton();
+        menu = new javax.swing.JButton();
+        gbr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan2.1.png"))); // NOI18N
-        getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        kembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/button/b.kembali.png"))); // NOI18N
+        kembali.setBackground(new java.awt.Color(255, 255, 255));
+        kembali.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
+        kembali.setText("Kembali");
         kembali.setBorder(null);
+        kembali.setBorderPainted(false);
+        kembali.setContentAreaFilled(false);
+        kembali.setFocusPainted(false);
+        kembali.setVerifyInputWhenFocusTarget(false);
         kembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kembaliActionPerformed(evt);
             }
         });
-        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 40));
+        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 520, 180, 80));
+
+        lanjut.setBackground(new java.awt.Color(255, 255, 255));
+        lanjut.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
+        lanjut.setText("Lanjut");
+        lanjut.setBorder(null);
+        lanjut.setBorderPainted(false);
+        lanjut.setContentAreaFilled(false);
+        lanjut.setFocusPainted(false);
+        lanjut.setVerifyInputWhenFocusTarget(false);
+        lanjut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lanjutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(845, 520, 180, 80));
+
+        menu.setBackground(new java.awt.Color(255, 255, 255));
+        menu.setForeground(new java.awt.Color(255, 255, 255));
+        menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.menu.png"))); // NOI18N
+        menu.setBorder(null);
+        menu.setBorderPainted(false);
+        menu.setContentAreaFilled(false);
+        menu.setFocusPainted(false);
+        menu.setVerifyInputWhenFocusTarget(false);
+        menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 72, 50));
+
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan2.2.png"))); // NOI18N
+        getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void lanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanjutActionPerformed
+        v_Bantuan3 b3 = new v_Bantuan3();
+        b3.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lanjutActionPerformed
+
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+        v_Bantuan b1 = new v_Bantuan();
+        b1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_kembaliActionPerformed
+
+    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
         v_Menu mn = new v_Menu();
         mn.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_kembaliActionPerformed
+    }//GEN-LAST:event_menuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,5 +143,7 @@ public class v_Bantuan2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel gbr;
     private javax.swing.JButton kembali;
+    private javax.swing.JButton lanjut;
+    private javax.swing.JButton menu;
     // End of variables declaration//GEN-END:variables
 }
