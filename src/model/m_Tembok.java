@@ -68,10 +68,10 @@ public class m_Tembok {
     
     public boolean tabrakKiri(m_Tembok pemain){
         boolean tabrak = false;
-        if ((((getAtasKanan().getX() > pemain.getAtasKiri().getX() && pemain.getAtasKiri().getX() < getBawahKanan().getX()) && 
-              (getAtasKanan().getY() > pemain.getAtasKiri().getY() && pemain.getAtasKiri().getY() < getBawahKanan().getY())) &&
-             ((getAtasKanan().getX() > pemain.getBawahKiri().getX() && pemain.getBawahKiri().getX() < getBawahKanan().getX()) &&
-              (getAtasKanan().getY() > pemain.getBawahKiri().getY() && pemain.getBawahKiri().getY() < getBawahKanan().getY())))
+        if ((((getAtasKiri().getX() < pemain.getAtasKiri().getX() && pemain.getAtasKiri().getX() < getAtasKanan().getX()) &&
+            (getAtasKanan().getY() < pemain.getAtasKiri().getY() && pemain.getAtasKiri().getY() < getBawahKanan().getY())) ||
+            ((getAtasKiri().getX() < pemain.getBawahKiri().getX() && pemain.getBawahKiri().getX() < getAtasKanan().getX()) &&
+            (getAtasKanan().getY() < pemain.getBawahKiri().getY() && pemain.getBawahKiri().getY() < getBawahKanan().getY())))
             ) {
             return true;
         }
@@ -80,10 +80,10 @@ public class m_Tembok {
     
         public boolean tabrakKanan(m_Tembok pemain){
         boolean tabrak = false;
-        if ((((getAtasKiri().getX() < pemain.getAtasKanan().getX() && getBawahKiri().getX() < pemain.getAtasKanan().getX()) && 
-              (getAtasKiri().getY() < pemain.getAtasKanan().getY() && getBawahKiri().getY() < pemain.getAtasKanan().getY())) &&
-             ((getAtasKiri().getX() < pemain.getBawahKanan().getX() && getBawahKiri().getX() < pemain.getBawahKanan().getX()) &&
-              (getAtasKiri().getY() < pemain.getBawahKanan().getY() && getBawahKiri().getY() < pemain.getBawahKanan().getY()))) 
+        if ((((getAtasKiri().getX() < pemain.getAtasKanan().getX() && pemain.getAtasKanan().getX() < getAtasKanan().getX()) &&
+            (getAtasKanan().getY() < pemain.getAtasKanan().getY() && pemain.getAtasKanan().getY() < getBawahKanan().getY())) ||
+            ((getAtasKiri().getX() < pemain.getBawahKanan().getX() && pemain.getBawahKanan().getX() < getAtasKanan().getX()) &&
+            (getAtasKanan().getY() < pemain.getBawahKanan().getY() && pemain.getBawahKanan().getY() < getBawahKanan().getY())))
             ) {
             return true;
         }
@@ -92,10 +92,10 @@ public class m_Tembok {
     
         public boolean tabrakAtas(m_Tembok pemain){
         boolean tabrak = false;
-        if ((((getAtasKiri().getX() < pemain.getBawahKiri().getX() && getAtasKanan().getX() < pemain.getBawahKiri().getX()) &&
-              (getAtasKiri().getY() < pemain.getBawahKiri().getY() && getAtasKanan().getY() < pemain.getBawahKiri().getY())) &&
-             ((getAtasKiri().getX() < pemain.getBawahKanan().getX() && getAtasKanan().getX() < pemain.getBawahKanan().getX()) &&
-              (getAtasKiri().getY() < pemain.getBawahKanan().getY() && getAtasKanan().getY() < pemain.getBawahKanan().getY())))
+        if ((((getBawahKanan().getY() > pemain.getAtasKiri().getY() && pemain.getAtasKiri().getY() > getAtasKanan().getY()) &&
+             (getBawahKanan().getX() > pemain.getAtasKiri().getX() && pemain.getAtasKiri().getX() > getBawahKiri().getX())) ||
+             ((getBawahKanan().getY() > pemain.getAtasKanan().getY() && pemain.getAtasKanan().getY() > getAtasKanan().getY()) &&
+             (getBawahKanan().getX() > pemain.getAtasKanan().getX() && pemain.getAtasKanan().getX() > getBawahKiri().getX())))
             ) {
             return true;
         }
@@ -104,10 +104,10 @@ public class m_Tembok {
         
             public boolean tabrakBawah(m_Tembok pemain){
         boolean tabrak = false;
-        if ((((getBawahKiri().getX() < pemain.getAtasKiri().getX() && getBawahKanan().getX() < pemain.getAtasKiri().getX()) &&
-              (getBawahKiri().getY() < pemain.getAtasKiri().getY() && getBawahKanan().getY() < pemain.getAtasKiri().getY())) &&
-             ((getBawahKiri().getX() < pemain.getAtasKanan().getX() && getBawahKanan().getX() < pemain.getAtasKanan().getX()) &&
-              (getBawahKiri().getY() < pemain.getAtasKanan().getY() && getBawahKanan().getY() < pemain.getAtasKanan().getY())))
+        if ((((getBawahKanan().getY() > pemain.getBawahKiri().getY() && pemain.getBawahKiri().getY() > getAtasKanan().getY()) &&
+             (getBawahKanan().getX() > pemain.getBawahKiri().getX() && pemain.getBawahKiri().getX() > getBawahKiri().getX())) ||
+             ((getBawahKanan().getY() > pemain.getBawahKanan().getY() && pemain.getBawahKanan().getY() > getAtasKanan().getY()) &&
+             (getBawahKanan().getX() > pemain.getBawahKanan().getX() && pemain.getBawahKanan().getX() > getBawahKiri().getX())))
                 ) {
             return true;
         }

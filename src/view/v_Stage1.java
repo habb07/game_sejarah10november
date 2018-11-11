@@ -303,39 +303,39 @@ public class v_Stage1 extends javax.swing.JFrame {
             }
             if (nabrak == false) {
                 int i = p.getX();
-                p.setX(i -= 1); 
+                p.setX(i -= 2); 
             }
         } else if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
             for (int a = 0; a < t.length; a++) {
-//                if (t[a].tabrak(p)) {
-//                    nabrak = true;
-//                }
+                if (t[a].tabrakKanan(p)) {
+                    nabrak = true;
+                }
             }
             if (nabrak == false) {
                 int i = p.getX();
-                p.setX(i += 1); 
+                p.setX(i += 2); 
             }
         } else if (evt.getKeyCode() == KeyEvent.VK_UP) {
             for (int a = 0; a < t.length; a++) {
-//                if (t[a].tabrak(Px, Py)) {
-//                    nabrak = true;
-//                }
+                if (t[a].tabrakAtas(p)) {
+                    nabrak = true;
+                }
             }
 
             if (nabrak == false) {
                 int i = p.getY();
-                p.setY(i -= 1);
+                p.setY(i -= 2);
             }
 
         } else if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
             for (int a = 0; a < t.length; a++) {
-//                if (t[a].tabrak(Px, Py)) {
-//                    nabrak = true;
-//                }
+                if (t[a].tabrakBawah(p)) {
+                    nabrak = true;
+                }
             }
             if (nabrak == false) {
                 int i = p.getY();
-                p.setY(i += 1);
+                p.setY(i += 2);
             }
         }
         pemain.setLocation(p.getX(), p.getY());
