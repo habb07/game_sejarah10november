@@ -36,7 +36,7 @@ public class v_Bantuan extends javax.swing.JFrame {
 
         lanjut.setBackground(new java.awt.Color(255, 255, 255));
         lanjut.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
-        lanjut.setText("Lanjut");
+        lanjut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.lanjut1.1.png"))); // NOI18N
         lanjut.setBorder(null);
         lanjut.setBorderPainted(false);
         lanjut.setContentAreaFilled(false);
@@ -47,7 +47,7 @@ public class v_Bantuan extends javax.swing.JFrame {
                 lanjutActionPerformed(evt);
             }
         });
-        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(845, 520, 180, 80));
+        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(945, 520, 80, 80));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
         menu.setForeground(new java.awt.Color(255, 255, 255));
@@ -64,7 +64,7 @@ public class v_Bantuan extends javax.swing.JFrame {
         });
         getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 72, 50));
 
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan1.2.png"))); // NOI18N
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan1.3.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

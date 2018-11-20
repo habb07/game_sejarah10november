@@ -12,12 +12,21 @@ import model.m_Koordinat;
 public class m_Tembok {
     m_Koordinat k;
     int panjang, lebar, x, y;
+    int f;
 
     public m_Tembok(int panjang, int lebar, int x, int y) {
         this.panjang = panjang;
         this.lebar = lebar;
         this.x = x;
         this.y = y;
+    }
+    
+    public m_Tembok(int panjang, int lebar, int x, int y, int f) {
+        this.panjang = panjang;
+        this.lebar = lebar;
+        this.x = x;
+        this.y = y;
+        this.f = f;
     }
     
     public m_Koordinat getAtasKiri(){
@@ -54,6 +63,14 @@ public class m_Tembok {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public int getF() {
+        return f;
+    }
+
+    public void setF(int f) {
+        this.f = f;
     }
     
     

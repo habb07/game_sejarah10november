@@ -37,7 +37,7 @@ public class v_Bantuan2 extends javax.swing.JFrame {
 
         kembali.setBackground(new java.awt.Color(255, 255, 255));
         kembali.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
-        kembali.setText("Kembali");
+        kembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.kembali1.png"))); // NOI18N
         kembali.setBorder(null);
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
@@ -48,11 +48,11 @@ public class v_Bantuan2 extends javax.swing.JFrame {
                 kembaliActionPerformed(evt);
             }
         });
-        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 520, 180, 80));
+        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 80, 80));
 
         lanjut.setBackground(new java.awt.Color(255, 255, 255));
         lanjut.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
-        lanjut.setText("Lanjut");
+        lanjut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.lanjut1.1.png"))); // NOI18N
         lanjut.setBorder(null);
         lanjut.setBorderPainted(false);
         lanjut.setContentAreaFilled(false);
@@ -63,7 +63,7 @@ public class v_Bantuan2 extends javax.swing.JFrame {
                 lanjutActionPerformed(evt);
             }
         });
-        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(845, 520, 180, 80));
+        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(945, 520, 80, 80));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
         menu.setForeground(new java.awt.Color(255, 255, 255));

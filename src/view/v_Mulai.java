@@ -35,7 +35,7 @@ public class v_Mulai extends javax.swing.JFrame {
 
         lanjut.setBackground(new java.awt.Color(255, 255, 255));
         lanjut.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
-        lanjut.setText("Lanjut");
+        lanjut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.lanjut1.1.png"))); // NOI18N
         lanjut.setBorder(null);
         lanjut.setBorderPainted(false);
         lanjut.setContentAreaFilled(false);
@@ -46,7 +46,7 @@ public class v_Mulai extends javax.swing.JFrame {
                 lanjutActionPerformed(evt);
             }
         });
-        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 540, 90, 40));
+        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(945, 520, 80, 80));
 
         gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prolog1.1.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

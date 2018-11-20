@@ -12,7 +12,7 @@ package view;
 public class v_Mulai2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form v_Mulai2
+     * Creates new form v_Mulai3
      */
     public v_Mulai2() {
         initComponents();
@@ -27,14 +27,20 @@ public class v_Mulai2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        text = new javax.swing.JLabel();
         lanjut = new javax.swing.JButton();
         gbr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        text.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        text.setText("\"let's check it out\"");
+        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, -1, -1));
+
         lanjut.setBackground(new java.awt.Color(255, 255, 255));
-        lanjut.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        lanjut.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
+        lanjut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.lanjut1.1.png"))); // NOI18N
         lanjut.setText("Lanjut");
         lanjut.setBorder(null);
         lanjut.setBorderPainted(false);
@@ -46,9 +52,9 @@ public class v_Mulai2 extends javax.swing.JFrame {
                 lanjutActionPerformed(evt);
             }
         });
-        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 540, 90, 40));
+        getContentPane().add(lanjut, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 520, 230, 80));
 
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prolog1.2.png"))); // NOI18N
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -56,8 +62,8 @@ public class v_Mulai2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanjutActionPerformed
-        v_Mulai3 m3 = new v_Mulai3();
-        m3.setVisible(true);
+        v_Stage s1 = new v_Stage();
+        s1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_lanjutActionPerformed
 
@@ -87,6 +93,7 @@ public class v_Mulai2 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(v_Mulai2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -99,5 +106,6 @@ public class v_Mulai2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel gbr;
     private javax.swing.JButton lanjut;
+    private javax.swing.JLabel text;
     // End of variables declaration//GEN-END:variables
 }

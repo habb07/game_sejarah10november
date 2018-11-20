@@ -36,7 +36,9 @@ public class v_Bantuan3 extends javax.swing.JFrame {
 
         kembali.setBackground(new java.awt.Color(255, 255, 255));
         kembali.setFont(new java.awt.Font("Britannic Bold", 0, 48)); // NOI18N
-        kembali.setText("Kembali");
+        kembali.setForeground(new java.awt.Color(255, 255, 255));
+        kembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.kembali1.png"))); // NOI18N
+        kembali.setToolTipText("");
         kembali.setBorder(null);
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
@@ -47,7 +49,7 @@ public class v_Bantuan3 extends javax.swing.JFrame {
                 kembaliActionPerformed(evt);
             }
         });
-        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(845, 520, 180, 80));
+        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 80, 80));
 
         menu.setBackground(new java.awt.Color(255, 255, 255));
         menu.setForeground(new java.awt.Color(255, 255, 255));
@@ -64,7 +66,7 @@ public class v_Bantuan3 extends javax.swing.JFrame {
         });
         getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 72, 50));
 
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan3.png"))); // NOI18N
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bantuan3.2.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

@@ -11,7 +11,7 @@ package model;
  */
 public interface m_Konfigurasi { //konfigurasi database
     public final String DB_HOST = "localhost";
-    public final String DB_PORT = "5432";
+    public final String DB_PORT = "3306";
     public final String DB_USERNAME = "root";
     public final String DB_PASSWORD = "";
     public final String DB_NAME = "game10november";
