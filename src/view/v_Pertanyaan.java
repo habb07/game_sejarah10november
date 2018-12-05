@@ -92,6 +92,7 @@ public class v_Pertanyaan extends javax.swing.JFrame {
         soal1.setRows(5);
         soal1.setText("Soal");
         soal1.setBorder(null);
+        soal1.setCaretColor(new java.awt.Color(255, 255, 255));
         soal1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         soal1.setFocusCycleRoot(true);
         soal1.setFocusTraversalPolicy(null);

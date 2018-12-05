@@ -73,6 +73,8 @@ public class v_Stage extends javax.swing.JFrame {
         bendera3.setVisible(false);
         bendera4.setVisible(false);
 
+        tanya = new m_Pertanyaan();
+        
         int randomNum = ThreadLocalRandom.current().nextInt(0, 4 + 1);
         switch (randomNum) {
             case 0:
@@ -104,7 +106,6 @@ public class v_Stage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        menu = new javax.swing.JButton();
         pemain = new javax.swing.JLabel();
         bendera = new javax.swing.JLabel();
         bendera1 = new javax.swing.JLabel();
@@ -145,25 +146,11 @@ public class v_Stage extends javax.swing.JFrame {
         lahan31 = new javax.swing.JLabel();
         lahan32 = new javax.swing.JLabel();
         lahan33 = new javax.swing.JLabel();
+        menu = new javax.swing.JButton();
         gbr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        menu.setBackground(new java.awt.Color(255, 255, 255));
-        menu.setForeground(new java.awt.Color(255, 255, 255));
-        menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.menu.png"))); // NOI18N
-        menu.setBorder(null);
-        menu.setBorderPainted(false);
-        menu.setContentAreaFilled(false);
-        menu.setFocusPainted(false);
-        menu.setVerifyInputWhenFocusTarget(false);
-        menu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuActionPerformed(evt);
-            }
-        });
-        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 72, 50));
 
         pemain.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/karakter2.png"))); // NOI18N
         pemain.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -222,18 +209,27 @@ public class v_Stage extends javax.swing.JFrame {
         getContentPane().add(lahan32, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 588, 160, 10));
         getContentPane().add(lahan33, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 247, 200, 8));
 
+        menu.setBackground(new java.awt.Color(255, 255, 255));
+        menu.setForeground(new java.awt.Color(255, 255, 255));
+        menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.menu1.png"))); // NOI18N
+        menu.setBorder(null);
+        menu.setBorderPainted(false);
+        menu.setContentAreaFilled(false);
+        menu.setFocusPainted(false);
+        menu.setVerifyInputWhenFocusTarget(false);
+        menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
         gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/stage1.1.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
-        v_Menu mn = new v_Menu();
-        mn.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_menuActionPerformed
 
     private void pemainKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pemainKeyPressed
         
@@ -287,7 +283,7 @@ public class v_Stage extends javax.swing.JFrame {
                 p.setX(i -= 3);
                 v_Pertanyaan pt = new v_Pertanyaan(p);
                 ArrayList<Integer> idTanya = tanya.getId();
-                int index=0;
+                int index=1;
                 String pertanyaan="";
                 if (flag.tabrakKiri(p)) {
                     switch (flag.getF()) {
@@ -351,7 +347,7 @@ public class v_Stage extends javax.swing.JFrame {
                 v_Pertanyaan pt = new v_Pertanyaan(p);
                 ArrayList<Integer> idTanya = tanya.getId();
                 
-                int index=0;
+                int index=1;
                 String pertanyaan="";
                 if (flag.tabrakKiri(p)) {
                     switch (flag.getF()) {
@@ -415,7 +411,8 @@ public class v_Stage extends javax.swing.JFrame {
                 p.setY(i -= 3);
                 v_Pertanyaan pt = new v_Pertanyaan(p);
                 ArrayList<Integer> idTanya = tanya.getId();
-                int index=0;
+                
+                int index=1;
                 String pertanyaan="";
                 if (flag.tabrakKiri(p)) {
                     switch (flag.getF()) {
@@ -489,7 +486,8 @@ public class v_Stage extends javax.swing.JFrame {
                 p.setY(i += 3);
                 v_Pertanyaan pt = new v_Pertanyaan(p);
                 ArrayList<Integer> idTanya = tanya.getId();
-                int index=0;
+                
+                int index=1;
                 String pertanyaan="";
                 if (flag.tabrakKiri(p)) {
                     switch (flag.getF()) {
@@ -544,6 +542,12 @@ public class v_Stage extends javax.swing.JFrame {
         }
         pemain.setLocation(p.getX(), p.getY());
     }//GEN-LAST:event_pemainKeyPressed
+
+    private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
+        v_Menu mn = new v_Menu();
+        mn.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_menuActionPerformed
 
     /**
      * @param args the command line arguments

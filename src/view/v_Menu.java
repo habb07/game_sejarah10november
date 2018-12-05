@@ -17,26 +17,6 @@ public class v_Menu extends javax.swing.JFrame {
     public v_Menu() {
         initComponents();
     }
-    
-    public JButton getMulai() {
-        return mu;
-    }
-    
-    public JButton getNilai() {
-        return ni;
-    }
-    
-    public JButton getBantuan() {
-        return bt;
-    }
-    
-    public JButton getTentang() {
-        return tt;
-    }
-    
-    public JButton getKeluar() {
-        return kl;
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,7 +27,6 @@ public class v_Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         mu = new javax.swing.JButton();
-        ni = new javax.swing.JButton();
         bt = new javax.swing.JButton();
         tt = new javax.swing.JButton();
         kl = new javax.swing.JButton();
@@ -58,7 +37,7 @@ public class v_Menu extends javax.swing.JFrame {
 
         mu.setBackground(new java.awt.Color(255, 255, 255));
         mu.setForeground(new java.awt.Color(255, 255, 255));
-        mu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.mulai.png"))); // NOI18N
+        mu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.mulai1.png"))); // NOI18N
         mu.setBorder(null);
         mu.setBorderPainted(false);
         mu.setContentAreaFilled(false);
@@ -70,27 +49,11 @@ public class v_Menu extends javax.swing.JFrame {
                 muActionPerformed(evt);
             }
         });
-        getContentPane().add(mu, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 195, 360, 70));
-
-        ni.setBackground(new java.awt.Color(255, 255, 255));
-        ni.setForeground(new java.awt.Color(255, 255, 255));
-        ni.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.nilai.png"))); // NOI18N
-        ni.setBorder(null);
-        ni.setBorderPainted(false);
-        ni.setContentAreaFilled(false);
-        ni.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ni.setFocusPainted(false);
-        ni.setVerifyInputWhenFocusTarget(false);
-        ni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                niActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ni, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 274, 360, 70));
+        getContentPane().add(mu, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 465, -1, -1));
 
         bt.setBackground(new java.awt.Color(255, 255, 255));
         bt.setForeground(new java.awt.Color(255, 255, 255));
-        bt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.bantuan.png"))); // NOI18N
+        bt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.bantuan1.png"))); // NOI18N
         bt.setBorder(null);
         bt.setBorderPainted(false);
         bt.setContentAreaFilled(false);
@@ -101,11 +64,11 @@ public class v_Menu extends javax.swing.JFrame {
                 btActionPerformed(evt);
             }
         });
-        getContentPane().add(bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 352, 360, 70));
+        getContentPane().add(bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 385, -1, -1));
 
         tt.setBackground(new java.awt.Color(255, 255, 255));
         tt.setForeground(new java.awt.Color(255, 255, 255));
-        tt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.tentang.png"))); // NOI18N
+        tt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.tentang1.png"))); // NOI18N
         tt.setBorder(null);
         tt.setBorderPainted(false);
         tt.setContentAreaFilled(false);
@@ -116,11 +79,11 @@ public class v_Menu extends javax.swing.JFrame {
                 ttActionPerformed(evt);
             }
         });
-        getContentPane().add(tt, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 431, 360, 70));
+        getContentPane().add(tt, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 495, -1, -1));
 
         kl.setBackground(new java.awt.Color(255, 255, 255));
         kl.setForeground(new java.awt.Color(255, 255, 255));
-        kl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.keluar.png"))); // NOI18N
+        kl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/b.keluar1.png"))); // NOI18N
         kl.setBorder(null);
         kl.setBorderPainted(false);
         kl.setContentAreaFilled(false);
@@ -131,10 +94,10 @@ public class v_Menu extends javax.swing.JFrame {
                 klActionPerformed(evt);
             }
         });
-        getContentPane().add(kl, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 509, 360, 70));
+        getContentPane().add(kl, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 495, -1, -1));
 
         gbr.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu.png"))); // NOI18N
+        gbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu2.png"))); // NOI18N
         getContentPane().add(gbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 600));
 
         pack();
@@ -152,12 +115,6 @@ public class v_Menu extends javax.swing.JFrame {
         t.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_ttActionPerformed
-
-    private void niActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_niActionPerformed
-        v_Nilai n = new v_Nilai();
-        n.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_niActionPerformed
 
     private void btActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btActionPerformed
         v_Bantuan b = new v_Bantuan();
@@ -210,7 +167,6 @@ public class v_Menu extends javax.swing.JFrame {
     private javax.swing.JLabel gbr;
     private javax.swing.JButton kl;
     private javax.swing.JButton mu;
-    private javax.swing.JButton ni;
     private javax.swing.JButton tt;
     // End of variables declaration//GEN-END:variables
 }

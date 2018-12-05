@@ -46,7 +46,6 @@ public class m_Pertanyaan {
             ResultSet rs = statement.executeQuery();
             
             while(rs.next()){
-                System.out.println(rs.getInt(1));
                 idPertanyaan.add(rs.getInt(1));
             }
         }catch (SQLException ex) {
