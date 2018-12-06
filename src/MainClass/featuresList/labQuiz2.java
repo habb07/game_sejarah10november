@@ -31,7 +31,7 @@ public class labQuiz2 {
     //JButton optionsButton=new JButton("About");
     JButton nextButton;
     //JLabel Question, Answer;
-    JLabel Status, status1, status2, status3;
+    JLabel Status, status1, status2, status3, bgs;
     JButton borderButton;
     JLabel labScoreShow;
     JLabel labQuizBanner = new JLabel();
@@ -99,7 +99,7 @@ public class labQuiz2 {
 
         ansField.setBounds(50, 250, 400, 50);
         ansField.setFont(font1);
-        ansField.setToolTipText("Enter the correct answer...");
+        ansField.setToolTipText("Masukkan jawaban yang benar...");
         ansField.setSelectedTextColor(Color.GREEN);
         ansField.setForeground(new Color(0, 0, 0));
         ansField.setText("");
@@ -111,7 +111,11 @@ public class labQuiz2 {
 
         panel.setLayout(null);
         panel.setBackground(menuBackgroundColor);
-
+        
+        bgs = new JLabel();
+        bgs.setIcon(new ImageIcon("resources\\images\\background\\bgs.png"));
+        bgs.setBounds(0, 0, 900, 500);
+        
         Status = new JLabel();
         status1 = new JLabel();
         status2 = new JLabel();
@@ -150,7 +154,7 @@ public class labQuiz2 {
 
         labScoreShow.setBounds(700, 20, 200, 50);
         labScoreShow.setFont(font1);
-        labScoreShow.setText("Poin Bonus: " + labQuiz.labScore);
+        labScoreShow.setText("Poin Soal Essay: " + labQuiz.labScore);
 
         panel.add(questionShow);
         panel.add(ansField);
@@ -161,6 +165,7 @@ public class labQuiz2 {
         panel.add(status1);
         panel.add(status2);
         panel.add(status3);
+        panel.add(bgs);
 
         //  panel.add(Question);
         //  panel.add(Answer);

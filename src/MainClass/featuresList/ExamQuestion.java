@@ -184,7 +184,7 @@ public class ExamQuestion extends JPanel {
 
         bgs = new JLabel();
         bgs.setIcon(new ImageIcon("resources\\images\\background\\bgs.png"));
-        bgs.setBounds(0, 0, 1280, 720);
+        bgs.setBounds(0, 0, 900, 500);
         
         SubimitButton.setBounds(25, 370, 131, 40);
         SubimitButton.setIcon(new ImageIcon("resources\\images\\others\\submit1.png"));
