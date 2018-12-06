@@ -73,8 +73,8 @@ public class labQuiz {
         nextButton = new JButton();
         menuBackgroundColor = new Color(250, 204, 47);
 
-        Question = new String[4];
-        CorrectAnswer = new String[4];
+        Question = new String[3];
+        CorrectAnswer = new String[3];
 
         random = new Random();
 
@@ -88,7 +88,7 @@ public class labQuiz {
         file = new File("resources\\labQuiz\\lab1.txt");
         this.scanner = new Scanner(file);
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             Question[i] = scanner.nextLine();
             CorrectAnswer[i] = scanner.nextLine();
         }
@@ -152,7 +152,7 @@ public class labQuiz {
 
         labScoreShow.setBounds(700, 20, 200, 50);
         labScoreShow.setFont(font1);
-        labScoreShow.setText("Lab Score: " + labScore);
+        labScoreShow.setText("Poin Bonus: " + labScore);
 
         panel.add(questionShow);
         panel.add(ansField);
@@ -174,7 +174,7 @@ public class labQuiz {
     }
 
     public void setChoiceIndex() {
-        ChoiceIndex = (Math.abs(random.nextInt())) % 4;
+        ChoiceIndex = (Math.abs(random.nextInt())) % 3;
     }
 
     private class submitListener implements ActionListener {
@@ -204,9 +204,8 @@ public class labQuiz {
 
                 status1.setIcon(new ImageIcon(wrongAns));
                 if (correct1 == 1) {
-                    labScore += .250;
+                    labScore += 12.5;
                     status2.setIcon(new ImageIcon(correctAns));
-                    ansField.setText("Click on NEXT Button(a_a)");
                     nextReady = true;
                     wrong1 = 0;
                     correct1 = 0;
@@ -218,9 +217,8 @@ public class labQuiz {
 
                 status2.setIcon(new ImageIcon(wrongAns));
                 if (correct1 == 1) {
-                    labScore += .125;
+                    labScore += 10.0;
                     status3.setIcon(new ImageIcon(correctAns));
-                    ansField.setText("Click on NEXT Button(a_a)");
                     nextReady = true;
                     wrong1 = 0;
                     correct1 = 0;
@@ -232,10 +230,9 @@ public class labQuiz {
                 GamePanel.gameOverClose = true;
                 frame.dispose();
             } else if (correct1 == 1) {
-                labScore += .375;
+                labScore += 7.5;
 
                 status1.setIcon(new ImageIcon(correctAns));
-                ansField.setText("Click on NEXT Button(a_a)");
                 nextReady = true;
                 wrong1 = 0;
                 correct1 = 0;

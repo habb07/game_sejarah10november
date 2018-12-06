@@ -240,7 +240,7 @@ public class UserName {
             playerName = name.getText();
 
             if (playerName.length() > 10) {
-                JOptionPane.showMessageDialog(null, "Silahkan tulis karakter kurang dari 11!");
+                JOptionPane.showMessageDialog(null, "Silahkan masukkan nama kurang dari 11 karakter!");
             } else if (playerName.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Silahkan masukkan nama kamu!");
             } else if ((playerSelected1 == true)

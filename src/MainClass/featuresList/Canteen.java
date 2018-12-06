@@ -28,9 +28,9 @@ public class Canteen {
     }
 
     public Canteen() {
-        p = 950;
+        p = 1200;
         q = 15;
-        ImageIcon allTimecanteenImage = new ImageIcon("resources\\images\\canteenFoods\\canteen1.png");
+        ImageIcon allTimecanteenImage = new ImageIcon("resources\\images\\canteenFoods\\canteen.png");
         image2 = allTimecanteenImage.getImage();
     }
 

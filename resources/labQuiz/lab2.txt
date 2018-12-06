@@ -1,8 +1,6 @@
-Which function is used to determine string length?
-strlen()
-The function to randomize any data is 
-rand()
-%d is called ____ of integer 
-format specifier
-a=strlen(b) what is the data type of a?
-int
+Pihak siapakah yang memulai Tragedi Jembatan Merah?
+serdadu india
+Senapan apa yang digunakan oleh pihak Inggris?
+bren
+Apakah gencatan senjata berhasil? 
+tidak

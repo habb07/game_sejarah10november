@@ -71,7 +71,7 @@ public class GamePanel implements ActionListener {
     Image gamePause = Toolkit.getDefaultToolkit().getImage("resources\\images\\others\\paused.png");
     Image gameOver = Toolkit.getDefaultToolkit().getImage("resources\\images\\others\\gameover.gif");
     Image gameWin = Toolkit.getDefaultToolkit().getImage("resources\\images\\others\\congrats3.gif");
-    Image semester1_1 = Toolkit.getDefaultToolkit().getImage("resources\\images\\others\\semester1.gif");
+    Image mulai = Toolkit.getDefaultToolkit().getImage("resources\\images\\others\\mulai.gif");
 
     Image sound_on = Toolkit.getDefaultToolkit().getImage("resources\\images\\others\\switch-on.png");
     Image sound_off = Toolkit.getDefaultToolkit().getImage("resources\\images\\others\\switch-off.png");
@@ -120,22 +120,20 @@ public class GamePanel implements ActionListener {
         time = new Timer(5, this);      //in every 5 mili sec its going to update our image
         time.start(); //this will run a method for action performed
 
-        questions = new Questions(650, 330, "resources\\images\\others\\ques.gif");
-        questions2 = new Questions(650, 330, "resources\\images\\others\\ques.gif");
-        questions3 = new Questions(650, 330, "resources\\images\\others\\ques.gif");
-        questions4 = new Questions(650, 330, "resources\\images\\others\\ques.gif");
-        questions5 = new Questions(650, 330, "resources\\images\\others\\ques.gif");
+        questions = new Questions(650, 330, "resources\\images\\others\\bendera1.gif");
+        questions2 = new Questions(650, 330, "resources\\images\\others\\bendera1.gif");
+        questions3 = new Questions(650, 330, "resources\\images\\others\\bendera1.gif");
+        questions4 = new Questions(650, 330, "resources\\images\\others\\bendera1.gif");
+        questions5 = new Questions(650, 330, "resources\\images\\others\\bendera1.gif");
 
-        labSir = new labExam(650, 420, "resources\\images\\players\\labSir.png");
-
-        //gangnamMusic = new GameMusic("resources\\music\\gangnam.wav");
+        labSir = new labExam(650, 400, "resources\\images\\players\\labSir.png");
         //Emos Declare
-        emoIcon = new Emos(1130, 130, "resources\\images\\emos\\icon1.png");
-        emoCorrect = new Emos(1130, 130, "resources\\images\\emos\\icon2.png");
-        emoWrong = new Emos(1130, 130, "resources\\images\\emos\\icon3.png");
+        emoIcon = new Emos(380, 68, "resources\\images\\emos\\icon1.png");
+        emoCorrect = new Emos(380, 68, "resources\\images\\emos\\icon2.png");
+        emoWrong = new Emos(380, 68, "resources\\images\\emos\\icon3.png");
 
         //canteen logo
-        canteenlogo = new Canteen(580, 200);
+        canteenlogo = new Canteen(1250, 20);
         canteenAllTimeAppear = new Canteen();
 
         coins = new ArrayList();
@@ -206,9 +204,6 @@ public class GamePanel implements ActionListener {
         }
 
         System.out.println("x: " + player.x);
-        // System.out.println("left: "+player.left);
-        //System.out.println("y: "+player.y);
-        //System.out.println("mouseX: " + player.mouseX);
         player.move();
 
         // 1st Question will be showed
@@ -448,28 +443,28 @@ public class GamePanel implements ActionListener {
                     graphics2D.drawImage(questions.getImage(), questions.getX(), questions.getY(), null);
                 }
             }
-            if (player.x > 2000) {
+            if (player.x > 1600) {
                 if (questions2.Available() == true) {
                     graphics2D.drawImage(questions2.getImage(), questions2.getX(), questions2.getY(), null);
                 }
             }
-            if (player.x > 3600) {
+            if (player.x > 3200) {
                 if (questions3.Available() == true) {
                     graphics2D.drawImage(questions3.getImage(), questions3.getX(), questions3.getY(), null);
                 }
             }
-            if (player.x > 5200) {
+            if (player.x > 4800) {
                 if (questions4.Available() == true) {
                     graphics2D.drawImage(questions4.getImage(), questions4.getX(), questions4.getY(), null);
                 }
             }
-            if (player.x > 6800) {
+            if (player.x > 6400) {
                 if (questions5.Available() == true) {
                     graphics2D.drawImage(questions5.getImage(), questions5.getX(), questions5.getY(), null);
                 }
             }
 
-            if (player.x > 8400) {
+            if (player.x > 8000) {
                 if (labSir.Available() == true) {
                     graphics2D.drawImage(labSir.getImage(), labSir.getX(), labSir.getY(), null);
                 }
@@ -549,13 +544,13 @@ public class GamePanel implements ActionListener {
             graphics2D.setFont(new Font("BatmanForeverAlternate", Font.BOLD, 22));
 
             //Energy;
-            graphics2D.drawImage(energyShow, 30, 135, null);
+            graphics2D.drawImage(energyShow, 30, 65, null);
             graphics2D.setColor(new Color(236, 23, 8));
-            graphics2D.fillRect(65, 140, 301, 34);//inside  Red
+            graphics2D.fillRect(65, 65, 301, 34);//inside  Red
             graphics2D.setColor(new Color(0, 0, 0));
-            graphics2D.drawRect(65, 140, 302, 35); //border
+            graphics2D.drawRect(65, 65, 301, 34); //border
             graphics2D.setColor(new Color(19, 206, 6));
-            graphics2D.fillRect(65, 140, (int) player.energy * 3, 34); // upeer red 
+            graphics2D.fillRect(65, 65, (int) player.energy * 3, 34); // upeer red 
 
             //all font color
             graphics2D.setColor(Color.BLACK);
@@ -580,7 +575,7 @@ public class GamePanel implements ActionListener {
             Font pfont = new Font("BatmanForeverAlternate", Font.PLAIN, 20);
             graphics2D.setFont(pfont);
             graphics2D.setColor(new Color(255, 255, 255));
-            graphics2D.drawString("Player: " + UserName.playerName, 76, 165);
+            graphics2D.drawString(UserName.playerName, 76, 90);
 
             //Energy Bar
             //  graphics2D.drawString("Energy: "+(int)player.energy+"%", 25, 90);
@@ -608,13 +603,13 @@ public class GamePanel implements ActionListener {
             }
 
             //Sound stop by control
-            graphics2D.drawImage(sound_on, 1070, 135, null);
+            graphics2D.drawImage(sound_on, 1110, 10, null);
             if (player.soundStop == true) {
                 AudioPlayer.player.stop(as);
-                graphics2D.drawImage(sound_off, 1070, 135, null);
+                graphics2D.drawImage(sound_off, 1110, 10, null);
             } else {
                 AudioPlayer.player.start(as);
-                graphics2D.drawImage(sound_on, 1070, 135, null);
+                graphics2D.drawImage(sound_on, 1110, 10, null);
             }
 
             //Game Over
@@ -638,10 +633,10 @@ public class GamePanel implements ActionListener {
                 if (tScore >= 3.0 && tScore <= 4.0) {
                     //graphics2D.drawString("Game Over : ", 340, 230);
                     graphics2D.drawImage(gameWin, 250, 170, null);
-                    graphics2D.drawString("CGPA: " + tScore, 550, 465);
+                    graphics2D.drawString("Poin : " + tScore, 550, 465);
                 } else {
                     graphics2D.drawImage(gameOver, 340, 230, null);
-                    graphics2D.drawString("CGPA: " + tScore, 470, 360);
+                    graphics2D.drawString("Poin : " + tScore, 470, 360);
                 }
 
                 // graphics2D.drawImage(gangnamStyle,870, 265, null);
@@ -656,7 +651,7 @@ public class GamePanel implements ActionListener {
 
             //After game start this icon will be shown
             if (counter <= 4) {
-                graphics2D.drawImage(semester1_1, 350, 220, null);
+                graphics2D.drawImage(mulai, 350, 220, null);
             }
             //game pause icon appear condition
             if (player.gamePause == true) {

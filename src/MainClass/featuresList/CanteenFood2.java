@@ -19,13 +19,13 @@ public class CanteenFood2 extends JPanel {
     private JLabel item1, item2, item3, item4, item5, priceUpdivider, totalSelected;
     private JButton BuyButton, BackButton, addButton1, addButton2, addButton3, addButton4, addButton5, removeButton1,
             removeButton2, removeButton3, removeButton4, removeButton5, showPrice;
-    private JLabel coffeeImage, pizzaImage, birianImage, noodlesImage, burgerIamge;
+    private JLabel dawetImage, rujakImage, lalapanmage, pecelImage, tahutekIamge;
     private ButtonGroup group;
 
-    private int coffieCounter = 0, pizzaCounter = 0, birianiCounter = 0, noodlesCounter = 0, burgerCounter = 0, totalCounter = 0;
+    private int dawetCounter = 0, rujakCounter = 0, lalapanCounter = 0, pecelCounter = 0, tahutekCounter = 0, totalCounter = 0;
     private boolean itemselection = false;
 
-    private final int burger = 25, pizza = 28, biriani = 55, noodles = 15, coffee = 8;
+    private final int dawet = 8, pecel = 15, tahutek = 25, rujak = 28, lalapan = 55;
     private Color panelColor, buttonColor;
     Player player;
     Image imageSelect;
@@ -33,7 +33,7 @@ public class CanteenFood2 extends JPanel {
 
     public CanteenFood2() {
 
-        frame = new JFrame("Hingry! Buy Food");
+        frame = new JFrame("Lapar! Beli Makan/Minum dong");
 
         panel = new JPanel();
 
@@ -52,13 +52,14 @@ public class CanteenFood2 extends JPanel {
         addButton1.setOpaque(false);
         addButton1.setContentAreaFilled(false);
         addButton1.setBorderPainted(false);
+        addButton1.addActionListener(new showListener());
         addButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
 
-                if (coffieCounter == 5) {
-                    coffieCounter = 5;
+                if (dawetCounter == 5) {
+                    dawetCounter = 5;
                 } else {
-                    coffieCounter++;
+                    dawetCounter++;
                     itemselection = true;
                 }
             }
@@ -71,12 +72,13 @@ public class CanteenFood2 extends JPanel {
         addButton2.setOpaque(false);
         addButton2.setContentAreaFilled(false);
         addButton2.setBorderPainted(false);
+        addButton2.addActionListener(new showListener());
         addButton2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (pizzaCounter == 5) {
-                    pizzaCounter = 5;
+                if (pecelCounter == 5) {
+                    pecelCounter = 5;
                 } else {
-                    pizzaCounter++;
+                    pecelCounter++;
                     itemselection = true;
                 }
             }
@@ -89,12 +91,13 @@ public class CanteenFood2 extends JPanel {
         addButton3.setOpaque(false);
         addButton3.setContentAreaFilled(false);
         addButton3.setBorderPainted(false);
+        addButton3.addActionListener(new showListener());
         addButton3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (birianiCounter == 5) {
-                    birianiCounter = 5;
+                if (tahutekCounter == 5) {
+                    tahutekCounter = 5;
                 } else {
-                    birianiCounter++;
+                    tahutekCounter++;
                     itemselection = true;
                 }
             }
@@ -107,12 +110,13 @@ public class CanteenFood2 extends JPanel {
         addButton4.setOpaque(false);
         addButton4.setContentAreaFilled(false);
         addButton4.setBorderPainted(false);
+        addButton4.addActionListener(new showListener());
         addButton4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (noodlesCounter == 5) {
-                    noodlesCounter = 5;
+                if (rujakCounter == 5) {
+                    rujakCounter = 5;
                 } else {
-                    noodlesCounter++;
+                    rujakCounter++;
                     itemselection = true;
                 }
             }
@@ -125,12 +129,13 @@ public class CanteenFood2 extends JPanel {
         addButton5.setOpaque(false);
         addButton5.setContentAreaFilled(false);
         addButton5.setBorderPainted(false);
+        addButton5.addActionListener(new showListener());
         addButton5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (burgerCounter == 5) {
-                    burgerCounter = 5;
+                if (lalapanCounter == 5) {
+                    lalapanCounter = 5;
                 } else {
-                    burgerCounter++;
+                    lalapanCounter++;
                     itemselection = true;
                 }
 
@@ -144,12 +149,13 @@ public class CanteenFood2 extends JPanel {
         removeButton1.setOpaque(false);
         removeButton1.setContentAreaFilled(false);
         removeButton1.setBorderPainted(false);
+        removeButton1.addActionListener(new showListener());
         removeButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (coffieCounter == 0) {
-                    coffieCounter = 0;
+                if (dawetCounter == 0) {
+                    dawetCounter = 0;
                 } else {
-                    coffieCounter--;
+                    dawetCounter--;
                 }
             }
         });
@@ -161,12 +167,13 @@ public class CanteenFood2 extends JPanel {
         removeButton2.setOpaque(false);
         removeButton2.setContentAreaFilled(false);
         removeButton2.setBorderPainted(false);
+        removeButton2.addActionListener(new showListener());
         removeButton2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (pizzaCounter == 0) {
-                    pizzaCounter = 0;
+                if (pecelCounter == 0) {
+                    pecelCounter = 0;
                 } else {
-                    pizzaCounter--;
+                    pecelCounter--;
                 }
             }
         });
@@ -178,12 +185,13 @@ public class CanteenFood2 extends JPanel {
         removeButton3.setOpaque(false);
         removeButton3.setContentAreaFilled(false);
         removeButton3.setBorderPainted(false);
+        removeButton3.addActionListener(new showListener());
         removeButton3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (birianiCounter == 0) {
-                    birianiCounter = 0;
+                if (tahutekCounter == 0) {
+                    tahutekCounter = 0;
                 } else {
-                    birianiCounter--;
+                    tahutekCounter--;
                 }
             }
         });
@@ -195,12 +203,13 @@ public class CanteenFood2 extends JPanel {
         removeButton4.setOpaque(false);
         removeButton4.setContentAreaFilled(false);
         removeButton4.setBorderPainted(false);
+        removeButton4.addActionListener(new showListener());
         removeButton4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (noodlesCounter == 0) {
-                    noodlesCounter = 0;
+                if (rujakCounter == 0) {
+                    rujakCounter = 0;
                 } else {
-                    noodlesCounter--;
+                    rujakCounter--;
                 }
 
             }
@@ -213,45 +222,45 @@ public class CanteenFood2 extends JPanel {
         removeButton5.setOpaque(false);
         removeButton5.setContentAreaFilled(false);
         removeButton5.setBorderPainted(false);
+        removeButton5.addActionListener(new showListener());
         removeButton5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                if (burgerCounter == 0) {
-                    burgerCounter = 0;
+                if (lalapanCounter == 0) {
+                    lalapanCounter = 0;
                 } else {
-                    burgerCounter--;
+                    lalapanCounter--;
                 }
 
             }
         });
 
-        coffeeImage = new JLabel();
-        coffeeImage.setIcon(new ImageIcon("resources\\images\\canteenFoods\\coffee1.jpg"));
-        coffeeImage.setBounds(80, 120, 158, 180);
-        panel.add(coffeeImage);
+        dawetImage = new JLabel();
+        dawetImage.setIcon(new ImageIcon("resources\\images\\canteenFoods\\dawet.png"));
+        dawetImage.setBounds(80, 120, 158, 180);
+        panel.add(dawetImage);
 
-        pizzaImage = new JLabel();
-        pizzaImage.setIcon(new ImageIcon("resources\\images\\canteenFoods\\pizza1.png"));
-        pizzaImage.setBounds(310, 120, 158, 180);
-        panel.add(pizzaImage);
+        rujakImage = new JLabel();
+        rujakImage.setIcon(new ImageIcon("resources\\images\\canteenFoods\\pecel.png"));
+        rujakImage.setBounds(310, 120, 158, 180);
+        panel.add(rujakImage);
 
-        birianImage = new JLabel();
-        birianImage.setIcon(new ImageIcon("resources\\images\\canteenFoods\\biriani1.png"));
-        birianImage.setBounds(540, 120, 158, 180);
-        panel.add(birianImage);
+        lalapanmage = new JLabel();
+        lalapanmage.setIcon(new ImageIcon("resources\\images\\canteenFoods\\tahutek.png"));
+        lalapanmage.setBounds(540, 120, 158, 180);
+        panel.add(lalapanmage);
 
-        noodlesImage = new JLabel();
-        noodlesImage.setIcon(new ImageIcon("resources\\images\\canteenFoods\\noodles.jpg"));
-        noodlesImage.setBounds(770, 120, 158, 180);
-        panel.add(noodlesImage);
+        pecelImage = new JLabel();
+        pecelImage.setIcon(new ImageIcon("resources\\images\\canteenFoods\\rujak.png"));
+        pecelImage.setBounds(770, 120, 158, 180);
+        panel.add(pecelImage);
 
-        burgerIamge = new JLabel();
-        burgerIamge.setIcon(new ImageIcon("resources\\images\\canteenFoods\\burger1.png"));
-        burgerIamge.setBounds(1000, 120, 158, 180);
-        panel.add(burgerIamge);
+        tahutekIamge = new JLabel();
+        tahutekIamge.setIcon(new ImageIcon("resources\\images\\canteenFoods\\lalapan.png"));
+        tahutekIamge.setBounds(1000, 120, 158, 180);
+        panel.add(tahutekIamge);
 
         BuyButton = new JButton();
-        BuyButton.setBackground(buttonColor);
-        BuyButton.setBounds(800, 600, 155, 55);
+        BuyButton.setBounds(1080, 600, 75, 75);
         BuyButton.setIcon(new ImageIcon("resources\\images\\others\\buy1.png"));
         BuyButton.addActionListener(new OKListener());
         BuyButton.setOpaque(false);
@@ -259,22 +268,12 @@ public class CanteenFood2 extends JPanel {
         BuyButton.setBorderPainted(false);
 
         BackButton = new JButton();
-        BackButton.setBackground(buttonColor);
-        BackButton.setBounds(1000, 600, 155, 55);
+        BackButton.setBounds(1180, 600, 75, 75);
         BackButton.setIcon(new ImageIcon("resources\\images\\others\\back1.png"));
         BackButton.addActionListener(new CancelListener());
         BackButton.setOpaque(false);
         BackButton.setContentAreaFilled(false);
         BackButton.setBorderPainted(false);
-
-        showPrice = new JButton();
-        showPrice.setBackground(buttonColor);
-        showPrice.setBounds(590, 600, 180, 55);
-        showPrice.setIcon(new ImageIcon("resources\\images\\others\\show.png"));
-        showPrice.addActionListener(new showListener());
-        showPrice.setOpaque(false);
-        showPrice.setContentAreaFilled(false);
-        showPrice.setBorderPainted(false);
 
         AvaialabeList = new JLabel();
         SelectedItem = new JLabel();
@@ -300,20 +299,19 @@ public class CanteenFood2 extends JPanel {
 
         Font font1 = new Font("SansSerif", Font.BOLD, 25);
 
-        item1.setBounds(80, 300, 240, 180);
+        item1.setBounds(80, 300, 300, 180);
         item1.setFont(font1);
-        item1.setText("");
 
-        item2.setBounds(80, 350, 240, 180);
+        item2.setBounds(80, 350, 300, 180);
         item2.setFont(font1);
 
-        item3.setBounds(80, 400, 240, 180);
+        item3.setBounds(80, 400, 300, 180);
         item3.setFont(font1);
 
-        item4.setBounds(80, 450, 240, 180);
+        item4.setBounds(80, 450, 300, 180);
         item4.setFont(font1);
 
-        item5.setBounds(80, 500, 240, 180);
+        item5.setBounds(80, 500, 300, 180);
         item5.setFont(font1);
 
         priceUpdivider.setBounds(70, 525, 280, 180);
@@ -322,27 +320,29 @@ public class CanteenFood2 extends JPanel {
         totalSelected.setBounds(80, 550, 300, 180);
         totalSelected.setFont(font1);
 
-        coinAvailabe.setBounds(500, 0, 500, 100);
+        coinAvailabe.setBounds(550, 0, 500, 100);
         coinAvailabe.setAutoscrolls(true);
         coinAvailabe.setFont(font1);
-        coinAvailabe.setText(" Coin Available: " + GamePanel.point);
+        coinAvailabe.setForeground(Color.WHITE);
+        coinAvailabe.setText("Coin kamu : " + GamePanel.point);
         panel.add(coinAvailabe);
 
         AvaialabeList.setBounds(40, 40, 700, 100);
         AvaialabeList.setFont(font1);
-        AvaialabeList.setText("#.Items Available In The List Are: ");
+        AvaialabeList.setForeground(Color.WHITE);
+        AvaialabeList.setText("#.Makanan dan minuman yang tersedia: ");
         panel.add(AvaialabeList);
 
         SelectedItem.setBounds(40, 300, 300, 100);
         SelectedItem.setFont(font1);
-        SelectedItem.setText("#.Item Selected: ");
+        SelectedItem.setForeground(Color.WHITE);
+        SelectedItem.setText("#.Dipilih: ");
         panel.add(SelectedItem);
 
         panel.add(BuyButton);
 
         panel.add(BackButton);
-
-        panel.add(showPrice);
+        
         panel.add(priceUpdivider);
         panel.add(totalSelected);
         panel.add(item1);
@@ -360,11 +360,11 @@ public class CanteenFood2 extends JPanel {
         panel.add(removeButton3);
         panel.add(removeButton4);
         panel.add(removeButton5);
-        panel.add(pizzaImage);
-        panel.add(coffeeImage);
-        panel.add(burgerIamge);
-        panel.add(noodlesImage);
-        panel.add(birianImage);
+        panel.add(rujakImage);
+        panel.add(dawetImage);
+        panel.add(tahutekIamge);
+        panel.add(pecelImage);
+        panel.add(lalapanmage);
         group = new ButtonGroup();
 
         group.add(BuyButton);
@@ -373,66 +373,66 @@ public class CanteenFood2 extends JPanel {
         //Selection
 
         /*
-        coffeeImage.addActionListener(new ActionListener() {
+        dawetImage.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent ae) {
-           if (GamePanel.point>=coffee) {
+           if (GamePanel.point>=dawet) {
                    answer = "a";
-                  //  item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\coffee1.jpg"));
+                  //  item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\dawet1.jpg"));
                    // JOptionPane.showMessageDialog(null,"Item Selected");
-               }else if (GamePanel.point!=coffee) {
+               }else if (GamePanel.point!=dawet) {
                    JOptionPane.showMessageDialog(null,"You Don't Have enough coin to buy it. please collect coin");
                }
          }
      });
         
-        pizzaImage.addActionListener(new ActionListener() {
+        rujakImage.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent ae) {
-            if (GamePanel.point>=pizza) {
+            if (GamePanel.point>=rujak) {
                    answer = "b";
-                  //  item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\pizza1.png"));
+                  //  item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\rujak1.png"));
                    // JOptionPane.showMessageDialog(null,"Item Selected");
-               }else if (GamePanel.point!=pizza) {
+               }else if (GamePanel.point!=rujak) {
                    JOptionPane.showMessageDialog(null,"You Don't Have enough coin to buy it. please collect coin");
                }
          }
      });
         
-        birianImage.addActionListener(new ActionListener() {
+        lalapanmage.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent ae) {
-              if (GamePanel.point>=pizza) {
+              if (GamePanel.point>=rujak) {
                    answer = "c";
-                    //item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\biriani1.png"));
+                    //item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\lalapan1.png"));
          
-               }else if (GamePanel.point!=pizza) {
+               }else if (GamePanel.point!=rujak) {
                    JOptionPane.showMessageDialog(null,"You Don't Have enough coin to buy it. please collect coin");
                }
          }
      });
         
-        noodlesImage.addActionListener(new ActionListener() {
+        pecelImage.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent ae) {
-           if (GamePanel.point>=noodles) {
+           if (GamePanel.point>=pecel) {
                    answer = "d";
-                  //  item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\noodles.jpg"));
+                  //  item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\pecel.jpg"));
               
-               }else if (GamePanel.point!=noodles) {
+               }else if (GamePanel.point!=pecel) {
                    JOptionPane.showMessageDialog(null,"You Don't Have enough coin to buy it. please collect coin");
                }
          }
      });
         
-        burgerIamge.addActionListener(new ActionListener() {
+        tahutekIamge.addActionListener(new ActionListener() {
          @Override
          public void actionPerformed(ActionEvent ae) {
-            if (GamePanel.point>=burger) {
+            if (GamePanel.point>=tahutek) {
                     answer = "e";
-                    //item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\burger1.png"));
+                    //item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\tahutek1.png"));
       
-               }else if (GamePanel.point!=burger) {
+               }else if (GamePanel.point!=tahutek) {
                    JOptionPane.showMessageDialog(null,"You Don't Have enough coin to buy it. please collect coin");
                }
          }
@@ -459,16 +459,22 @@ public class CanteenFood2 extends JPanel {
                         "Warning!!!",
                         JOptionPane.WARNING_MESSAGE);
             } else {
-                item1.setText("Coffee :           " + coffieCounter + " x " + coffee + "");
-                item2.setText("Pizza:           " + pizzaCounter + " x " + pizza + "");
-                item3.setText("Biriani:           " + birianiCounter + " x " + biriani + "");
-                item4.setText("Noodles:         " + noodlesCounter + " x " + noodles + "");
-                item5.setText("Burger:           " + burgerCounter + " x " + burger + "");
-                totalCounter = (coffieCounter * coffee) + (pizzaCounter * pizza)
-                        + (birianiCounter * biriani) + (noodlesCounter * noodles) + (burgerCounter * burger);
+                item1.setText("Dawet   :           " + dawetCounter + " x " + dawet + "");
+                item1.setForeground(Color.WHITE);
+                item2.setText("Pecel    :           " + pecelCounter + " x " + pecel + "");
+                item2.setForeground(Color.WHITE);
+                item3.setText("Tahutek:           " + tahutekCounter + " x " + tahutek + "");
+                item3.setForeground(Color.WHITE);
+                item4.setText("Rujak    :           " + rujakCounter + " x " + rujak + "");
+                item4.setForeground(Color.WHITE);
+                item5.setText("Lalapan:           " + lalapanCounter + " x " + lalapan + "");
+                item5.setForeground(Color.WHITE);
+                totalCounter = (dawetCounter * dawet) + (rujakCounter * rujak)
+                        + (lalapanCounter * lalapan) + (pecelCounter * pecel) + (tahutekCounter * tahutek);
                 priceUpdivider.setText("----------------------------------");
-                totalSelected.setText("Total Price:    " + totalCounter);
-                System.out.println("Hello");
+                priceUpdivider.setForeground(Color.WHITE);
+                totalSelected.setText("Jumlah Harga:    " + totalCounter);
+                totalSelected.setForeground(Color.WHITE);
             }
         }
     }
@@ -477,7 +483,7 @@ public class CanteenFood2 extends JPanel {
 
         public void actionPerformed(ActionEvent e) {
             if (totalCounter>GamePanel.point) {
-                JOptionPane.showMessageDialog(null, "You dont have enough budget! ");
+                JOptionPane.showMessageDialog(null, "Coin kamu tidak cukup!");
             }else{
             GamePanel.point -= totalCounter;
             if (player.energy != 100) {
@@ -489,101 +495,7 @@ public class CanteenFood2 extends JPanel {
                         }
                     }
             }
-                /*
-            //Do function if OK Button is pressed
-            if (answer != null) {
-                //Do action if an answer is pressed
-                if (answer.equals("a")) {
-                    //Do action if answer is correct
-                    GamePanel.point -= 10;
-
-                    //item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\blank.png"));
-                    //energy will be loose
-                    if (player.energy != 100) {
-                        if (player.energy < 100) {
-                            player.energy += 25;
-                        }
-                        if (player.energy >= 100) {
-                            player.energy = 100;
-                        }
-                    }
-                    //frame.setVisible(false);
-                } else if (answer.equals("b")) {
-                    //Do action if answer is correct
-                    GamePanel.point -= 30;
-
-                    JOptionPane.showMessageDialog(null, "Done.");
-                    //  item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\blank.png"));
-                    if (player.energy != 100) {
-                        if (player.energy < 100) {
-                            player.energy = player.energy + 40;
-                        }
-                        if (player.energy >= 100) {
-                            player.energy = 100;
-                        }
-
-                    }
-                    //frame.setVisible(false);
-                } else if (answer.equals("c")) {
-                    //Do action if answer is correct
-                    GamePanel.point -= 85;
-
-                    JOptionPane.showMessageDialog(null, "Done.");
-                    // item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\blank.png"));
-                    //energy will be loose
-                    if (player.energy != 100) {
-                        if (player.energy < 100) {
-                            player.energy = player.energy + 50;
-                        }
-                        if (player.energy >= 100) {
-                            player.energy = 100;
-                        }
-
-                    }
-                    //frame.setVisible(false);
-                } else if (answer.equals("d")) {
-                    //Do action if answer is correct
-                    GamePanel.point -= 25;
-
-                    JOptionPane.showMessageDialog(null, "Done.");
-                    //   item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\blank.png"));
-                    //energy will be loose
-                    if (player.energy != 100) {
-                        if (player.energy < 100) {
-                            player.energy = player.energy + 30;
-                        }
-                        if (player.energy >= 100) {
-                            player.energy = 100;
-                        }
-
-                    }
-
-                    //frame.setVisible(false);
-                } else if (answer.equals("e")) {
-                    //Do action if answer is correct'
-                    GamePanel.point -= 30;
-
-                    JOptionPane.showMessageDialog(null, "Done.");
-                    //    item.setIcon(new ImageIcon("resources\\images\\canteenFoods\\blank.png"));
-                    //energy will be loose
-                    if (player.energy != 100) {
-                        if (player.energy < 100) {
-                            player.energy = player.energy + 40;
-                        }
-                        if (player.energy >= 100) {
-                            player.energy = 100;
-                        }
-
-                    }
-                    // frame.setVisible(false);
-                }
-
-            } else {
-                //Do action if no answer is pressed
-                JOptionPane.showMessageDialog(null, "You have'nt select anything! ");
-                frame.setVisible(false);
-            }
-            */ 
+            
         }
     }
 
@@ -592,11 +504,11 @@ public class CanteenFood2 extends JPanel {
         @Override
         public void actionPerformed(ActionEvent e) {
             itemselection = false;
-            pizzaCounter = 0;
-            burgerCounter = 0;
-            coffieCounter = 0;
-            birianiCounter = 0;
-            noodlesCounter = 0;
+            rujakCounter = 0;
+            tahutekCounter = 0;
+            dawetCounter = 0;
+            lalapanCounter = 0;
+            pecelCounter = 0;
             GamePanel.time2.start();
             frame.setVisible(false);
         }
