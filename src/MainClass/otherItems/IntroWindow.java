@@ -28,7 +28,7 @@ public class IntroWindow {
     //JTextField Thanks;
     Timer time;
     int counter = 0;
-    String first = "resources\\images\\story\\first.png";
+    String first = "resources\\images\\story\\intro.png";
     /*
     String second="resources\\images\\story\\second.png";
     String third="resources\\images\\story\\third.png";
